@@ -1,14 +1,17 @@
-<div class="card-header">Clientes</div>
+<button type = "button" (click) = "setHabilitar()" class = "btn btn-primary my-3">
+  {{ habilitar == true ? "Ocultar" : "Mostrar"}}
+</button>
+
 <div class="card-body text-primary">
   <h5 class="card-title">Lista de clientes</h5>
-  <table class="table table-bordered table-striped">
+  <table class="table table-bordered table-striped" *ngIf = "habilitar">
     <thead>
       <tr>
         <th>Id</th>
         <th>Nombre</th>
         <th>Apellido</th>
         <th>Correo electrónico</th>
-        <th>Fecha de creación</th> 
+        <th>Fecha de creación</th>
       </tr>
     </thead>
     <tbody>
