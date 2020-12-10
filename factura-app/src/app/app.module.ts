@@ -6,12 +6,14 @@ import { ClientesComponent } from './clientes/clientes.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ClienteService } from './clientes/cliente.service';
+import { PasatiempoComponent } from './pasatiempo/pasatiempo.component';
 import {RouterModule, Routes} from '@angular/router';
-import { PasatiemposComponent } from './pasatiempos/pasatiempos.component';
+
 
 const routes: Routes = [
   {path: '', redirectTo:'/clientes', pathMatch:'full'},
-  {path: 'clientes', component: ClientesComponent}
+  {path: 'clientes', component: ClientesComponent},
+  {path: 'pasatiempo', component: PasatiempoComponent}
 ]
 
 @NgModule({
@@ -20,7 +22,7 @@ const routes: Routes = [
     ClientesComponent,
     HeaderComponent,
     FooterComponent,
-    PasatiemposComponent,
+    PasatiempoComponent,
   ],
   imports: [
     BrowserModule,
